@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  django-test:
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: django-test
+    container_name: django-test
+    restart: on-failure
+    command: bash -c "pip3 install cmake && pip3 install -r requirements.txt && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8101"
+    ports:
+      - "8101:8101"
