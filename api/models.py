@@ -8,7 +8,7 @@ class Image(models.Model):
     uploaded_by = models.PositiveIntegerField(null=True,default=None)
     image = models.ImageField(upload_to=imagedir,     verbose_name="Images|Фотография")
     trained = models.BooleanField(default=False)
-    created_at = models.DateTimeField(default=datetime.now, null=False, verbose_name="Created At|Создано")
+    created_at = models.DateTimeField(default=datetime.now, null=True, verbose_name="Created At|Создано")
     person_id = models.PositiveIntegerField(null=False,unique=False) 
     # is_uploaded_by_security = models.BooleanField(default=False)
     class Meta:
