@@ -11,3 +11,5 @@ services:
     command: bash -c "pip3 install cmake && pip3 install -r requirements.txt && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8101"
     ports:
       - "8101:8101"
+    volumes: 
+      - .:/code
