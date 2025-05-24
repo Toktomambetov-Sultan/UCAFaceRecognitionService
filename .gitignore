@@ -1,6 +1,0 @@
-venv   
-media/static/model/*
-media/static/uploads/images/*
-.env
-db.sqlite3
-
