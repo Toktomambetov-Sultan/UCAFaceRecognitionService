@@ -6,3 +6,6 @@ db.sqlite3
 
 data/
 static/
+
+__pycache__/
+*.pyc
